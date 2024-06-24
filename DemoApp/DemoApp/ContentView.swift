@@ -59,9 +59,7 @@ final class CameraModel: ObservableObject {
     }
     
     func capturePhoto() {
-        if !service.isCameraButtonDisabled {
-            service.capturePhoto()
-        }
+        service.capturePhoto()
     }
     
     func flipCamera() {

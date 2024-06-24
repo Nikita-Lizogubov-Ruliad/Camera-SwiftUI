@@ -481,6 +481,7 @@ public class CameraService: NSObject, Identifiable {
     
     /// - Tag: CapturePhoto
     public func capturePhoto() {
+        guard !isCameraButtonDisabled else { return }
         /*
          Retrieve the video preview layer's video orientation on the main queue before
          entering the session queue. This to ensures that UI elements are accessed on
